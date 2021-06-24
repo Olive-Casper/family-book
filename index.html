@@ -1,0 +1,36 @@
+<html>
+    <head>
+       <title>ADV 78 Project</title> 
+       <style>
+           body
+           {
+               text-align: center;
+               background-color: aqua;
+           }
+       </style>
+    </head>
+    <h1>My Family Book</h1>
+    <img src= "fampic.jpg" style="width: 30%;" id="family_member_image">
+    <h4 id="family_member_name"></h4>
+    <button onclick="update();">Next</button>
+    <script>
+        var images=
+        ["fampic.jpg","doggospic.JPG","grandmotherpic.png", "grandfatherpic.jpg", "auntpic.png", "unclepic.png", "didipic.png" , "bhaiyapic.png" , "mompic.jpng" , "dadpic.png" , "brotherpic.jpg"];
+        
+        var names = ["Family Book", "Olive & Casper - Dogs", "Shashi Jain - Grandmother", "DK.Jain - Grandfather" , "Richa Jain - Aunt ", "Nitish Jain - Uncle", "Advika Jain - Older Cousin Sister", "Sparsh Jain - Older Cousin Brother", "Ritika Jain - Mother", "Ashish Jain - Father", "Arham Jain - Younger Brother"];
+        var i= 0;
+        function update()
+        {
+            i++;
+            var numbers_of_family_members_in_array = 12
+            if (i > numbers_of_family_members_in_array)
+            {
+                i= 0;
+            }
+            var uptadedImage= images[i];
+            var updatedName= names[i];
+            document.getElementById("family_member_image").src = uptadedImage;
+            document.getElementById("family_member_name").innerHTML = updatedName;
+        }
+    </script>
+    </html>
